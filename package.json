@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://brunotomitao.github.io/Bruno-Emilly",
+  "homepage": "https://BrunoTomitao.github.io/Bruno-Emilly",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
