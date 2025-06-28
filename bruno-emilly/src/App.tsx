@@ -72,6 +72,7 @@ export default function App() {
     { src: "/images/hehe.jpg", alt: "Bruno e Emilly na praia", desc: "Dia na praia" },
   ];
 
+
   const abrirModal = (src: string) => setModalImage(src);
   const fecharModal = () => setModalImage(null);
 
