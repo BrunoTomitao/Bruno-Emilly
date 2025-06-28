@@ -64,12 +64,12 @@ export default function App() {
   }, []);
 
   const fotos = [
-    { src: "/images/Festa_Junina_Sao_jose.jpg", alt: "Bruno e Emilly no parque", desc: "Passeio no parque" },
-    { src: "/images/Festa_Junina_Sao_jose_banco.jpg", alt: "Bruno e Emilly tomando café", desc: "Café da manhã juntos" },
-    { src: "/images/aniversario.jpg", alt: "Aniversário da Emilly", desc: "Aniversário da Emilly" },
-    { src: "/images/a.jpg", alt: "Bruno e Emilly na praia", desc: "Dia na praia" },
-    { src: "/images/aa.jpg", alt: "Bruno e Emilly na praia", desc: "Dia na praia" },
-    { src: "/images/hehe.jpg", alt: "Bruno e Emilly na praia", desc: "Dia na praia" },
+    { src: "/Festa_Junina_Sao_jose.jpg", alt: "Bruno e Emilly no parque", desc: "Passeio no parque" },
+    { src: "/Festa_Junina_Sao_jose_banco.jpg", alt: "Bruno e Emilly tomando café", desc: "Café da manhã juntos" },
+    { src: "/aniversario.jpg", alt: "Aniversário da Emilly", desc: "Aniversário da Emilly" },
+    { src: "/a.jpg", alt: "Bruno e Emilly na praia", desc: "Dia na praia" },
+    { src: "/aa.jpg", alt: "Bruno e Emilly na praia", desc: "Dia na praia" },
+    { src: "/hehe.jpg", alt: "Bruno e Emilly na praia", desc: "Dia na praia" },
   ];
 
 
