@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat&display=swap');
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #e3f0d9 0%, #a7c77f 60%, #729d39 100%);
+  font-family: 'Montserrat', sans-serif;
+  color: #27430f;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Fundo animado de corações */
+.heart-emoji {
+  position: fixed;
+  user-select: none;
+  pointer-events: none;
+  z-index: -1;
+  font-size: 1.8rem;
+  opacity: 0.35;
+  animation-name: floatUpSideways;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  will-change: transform, opacity;
+  text-shadow: 0 0 6px #3f7d08;
+  filter: drop-shadow(0 0 2px #3f7d08);
+  --rotate: 0deg;
+  transform-origin: center;
+}
+
+@keyframes floatUpSideways {
+  0% {
+    transform: translateY(100vh) translateX(0) rotate(var(--rotate));
+    opacity: 0.35;
+  }
+  50% {
+    transform: translateY(50vh) translateX(20px) rotate(calc(var(--rotate) + 180deg));
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-20vh) translateX(0) rotate(calc(var(--rotate) + 360deg));
+    opacity: 0;
+  }
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 3.5rem 1rem 2rem;
+  position: relative;
+  z-index: 10;
+  user-select: none;
+}
+
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #4d7b12;
+  box-shadow: 0 0 25px #52842b;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: default;
+}
+
+.profile-pic:hover {
+  transform: scale(1.12) rotate(3deg);
+  box-shadow: 0 0 40px #76b042;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 3.8rem;
+  margin-top: 1rem;
+  color: #36590f;
+  letter-spacing: 0.1em;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  user-select: text;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #4f7f1a;
+  margin-top: 0.3rem;
+  user-select: none;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+/* Contadores - simplificados e elegantes */
+.counters {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 3rem 0 4rem;
+  user-select: none;
+}
+
+.counter-box {
+  background: rgba(255 255 255 / 0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 1.5rem;
+  box-shadow: 0 0 12px #a1c653;
+  color: #2e4a00;
+  padding: 2.5rem 3rem;
+  min-width: 140px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.8rem;
+  font-family: 'Courier New', monospace;
+  transition: box-shadow 0.3s ease;
+}
+
+.counter-box:hover {
+  box-shadow: 0 0 28px #7bc643;
+}
+
+.counter-label {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  letter-spacing: 0.06em;
+  color: #446600;
+}
+
+/* Galeria com efeito glass + sombra */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.photo-card {
+  background: rgba(255 255 255 / 0.2);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 20px rgb(50 80 0 / 0.3);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.photo-card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 12px 35px rgb(67 105 0 / 0.6);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 1.5rem 1.5rem 0 0;
+  transition: filter 0.3s ease;
+}
+
+.photo-card:hover img {
+  filter: brightness(1.15);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .counters {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .counter-box {
+    font-size: 2.3rem;
+    padding: 2rem 2.5rem;
+  }
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.8rem;
+  }
+  .photo-card img {
+    height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 2.5rem 1rem 1rem;
+  }
+  h1 {
+    font-size: 2.8rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+  .photo-card img {
+    height: 120px;
+  }
+}
